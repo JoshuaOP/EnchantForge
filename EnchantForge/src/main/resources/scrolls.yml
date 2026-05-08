@@ -1,0 +1,56 @@
+# ============================================================
+#                   EnchantForge Scrolls
+# ============================================================
+
+scrolls:
+  white_scroll:
+    display: "<white>White Scroll"
+    description:
+      - "<gray>Protects an item from"
+      - "<gray>being destroyed on failure."
+    material: PAPER
+    glow: true
+    custom-model-data: 10001
+    lore-tag: "<white>✦ Protected"
+    single-use: true
+
+  black_scroll:
+    display: "<dark_gray>Black Scroll"
+    description:
+      - "<gray>Removes a random enchant"
+      - "<gray>from an item."
+    material: PAPER
+    glow: true
+    custom-model-data: 10002
+    single-use: true
+
+  magic_dust:
+    display: "<light_purple>Magic Dust"
+    description:
+      - "<gray>Increases success rate"
+      - "<gray>by <light_purple>+{rate}%</light_purple> for one attempt."
+    material: GLOWSTONE_DUST
+    glow: true
+    custom-model-data: 10003
+    rate-boost: 10
+    single-use: true
+
+  upgrade_scroll:
+    display: "<gold>Upgrade Scroll"
+    description:
+      - "<gray>Upgrades a random enchant"
+      - "<gray>on an item by 1 level."
+    material: PAPER
+    glow: true
+    custom-model-data: 10004
+    single-use: true
+
+  transmog_scroll:
+    display: "<aqua>Transmog Scroll"
+    description:
+      - "<gray>Re-rolls all enchants"
+      - "<gray>on an item."
+    material: PAPER
+    glow: true
+    custom-model-data: 10005
+    single-use: true

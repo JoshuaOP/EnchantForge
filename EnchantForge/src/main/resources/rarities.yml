@@ -1,0 +1,60 @@
+# ============================================================
+#                   EnchantForge Rarities
+# ============================================================
+
+rarities:
+  COMMON:
+    display: "<white>Common"
+    color: "<white>"
+    weight: 100
+    success-rate-modifier: 1.0
+    destroy-rate-modifier: 1.0
+    glow: false
+
+  UNCOMMON:
+    display: "<green>Uncommon"
+    color: "<green>"
+    weight: 75
+    success-rate-modifier: 0.95
+    destroy-rate-modifier: 1.05
+    glow: false
+
+  RARE:
+    display: "<aqua>Rare"
+    color: "<aqua>"
+    weight: 50
+    success-rate-modifier: 0.85
+    destroy-rate-modifier: 1.15
+    glow: false
+
+  EPIC:
+    display: "<dark_purple>Epic"
+    color: "<dark_purple>"
+    weight: 25
+    success-rate-modifier: 0.70
+    destroy-rate-modifier: 1.30
+    glow: true
+
+  LEGENDARY:
+    display: "<gradient:#FFD700:#FF6B35>Legendary"
+    color: "<gold>"
+    weight: 10
+    success-rate-modifier: 0.55
+    destroy-rate-modifier: 1.50
+    glow: true
+
+  MYTHIC:
+    display: "<gradient:#FF0000:#FF69B4>Mythic"
+    color: "<red>"
+    weight: 3
+    success-rate-modifier: 0.35
+    destroy-rate-modifier: 1.75
+    glow: true
+
+  SPECIAL:
+    display: "<gradient:#00FFFF:#FF00FF>Special"
+    color: "<light_purple>"
+    weight: 1
+    success-rate-modifier: 0.20
+    destroy-rate-modifier: 2.0
+    glow: true

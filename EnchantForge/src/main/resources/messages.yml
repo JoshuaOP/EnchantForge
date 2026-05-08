@@ -1,0 +1,59 @@
+# ============================================================
+#                   EnchantForge Messages
+# ============================================================
+# Supports MiniMessage format and legacy & color codes
+# https://docs.advntr.dev/minimessage/format.html
+
+prefix: "<gradient:#FF6B35:#FFD700>[EnchantForge]</gradient> "
+
+general:
+  no-permission: "<red>You don't have permission to do that."
+  player-only: "<red>This command can only be run by a player."
+  unknown-command: "<red>Unknown subcommand. Use <yellow>/ce help</yellow> for help."
+  reload-success: "<green>Configuration reloaded successfully."
+  reload-failed: "<red>Failed to reload configuration. Check console for errors."
+  invalid-player: "<red>Player <yellow>{player}</yellow> not found."
+  invalid-enchant: "<red>Enchant <yellow>{enchant}</yellow> not found."
+  invalid-level: "<red>Invalid level. Must be between 1 and {max}."
+  invalid-amount: "<red>Invalid amount."
+
+enchants:
+  give-success: "<green>Given <yellow>{amount}x {enchant} {level}</yellow> book to <yellow>{player}</yellow>."
+  give-received: "<green>You received <yellow>{amount}x {enchant} {level}</yellow> enchant book."
+  apply-success: "<green>Successfully applied <yellow>{enchant} {level}</yellow> to your item!"
+  apply-failed: "<red>Failed to apply enchant. The item may not be compatible."
+  apply-destroyed: "<red>The item was destroyed during the enchanting process!"
+  max-enchants: "<red>This item has reached the maximum number of enchants ({max})."
+  incompatible: "<red>This enchant is not compatible with your item."
+  already-maxed: "<yellow>This enchant is already at its maximum level."
+  scroll-success: "<green>Successfully applied the scroll to your item!"
+  scroll-failed: "<red>Failed to apply scroll."
+  upgrade-success: "<green>Upgraded <yellow>{enchant}</yellow> to level <yellow>{level}</yellow>!"
+  upgrade-maxed: "<yellow>This enchant is already at its maximum level ({max})."
+  upgrade-failed: "<red>Upgrade failed!"
+
+gui:
+  enchant-browser-title: "<dark_gray>✦ Enchant Browser ✦"
+  category-menu-title: "<dark_gray>✦ Categories ✦"
+  scroll-editor-title: "<dark_gray>✦ Scroll Editor ✦"
+  editor-title: "<dark_gray>✦ Enchant Editor ✦"
+  next-page: "<green>Next Page »"
+  prev-page: "<green>« Previous Page"
+  page-info: "<gray>Page <white>{current}</white>/<white>{total}</white>"
+  close: "<red>✖ Close"
+  search: "<yellow>🔍 Search"
+  back: "<gray>« Back"
+  confirm: "<green>✔ Confirm"
+  cancel: "<red>✖ Cancel"
+
+help:
+  header: "<gradient:#FF6B35:#FFD700>━━━━━━━ EnchantForge Help ━━━━━━━</gradient>"
+  footer: "<gradient:#FF6B35:#FFD700>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</gradient>"
+  commands:
+    - "<yellow>/ce list <gray>- Browse all enchants"
+    - "<yellow>/ce info <enchant> <gray>- View enchant info"
+    - "<yellow>/ce give <player> <enchant> [level] [amount] <gray>- Give enchant book"
+    - "<yellow>/ce book <enchant> [level] <gray>- Get an enchant book"
+    - "<yellow>/ce editor <gray>- Open enchant editor"
+    - "<yellow>/ce reload <gray>- Reload configuration"
+    - "<yellow>/ce create <name> <gray>- Create a custom enchant"

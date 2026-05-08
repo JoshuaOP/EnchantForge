@@ -1,0 +1,94 @@
+# ============================================================
+#                    EnchantForge Config
+#           Premium Custom Enchantments Plugin
+# ============================================================
+
+settings:
+  # Language for messages (references messages.yml)
+  language: en
+  # Debug mode - logs extra info to console
+  debug: false
+  # Check for updates on startup
+  update-check: true
+  # Metrics (bStats)
+  metrics: true
+
+enchants:
+  # Maximum enchants allowed per item
+  max-per-item: 10
+  # Show enchant lore on items
+  show-lore: true
+  # Lore format for enchant display
+  # Placeholders: {name} {level} {roman} {description}
+  lore-format: "<gray>{name} {roman}"
+  # Separator between enchant groups in lore
+  lore-separator: ""
+  # Allow enchants on enchanted books
+  allow-books: true
+  # Animated lore tick rate (ticks, lower = faster)
+  animation-tick-rate: 4
+
+combining:
+  # Allow combining enchanted items in anvil
+  enabled: true
+  # XP cost per enchant when combining
+  xp-cost-per-enchant: 5
+  # Max level cap when combining (0 = use enchant max)
+  max-level-cap: 0
+
+scrolls:
+  # Enable scroll system
+  enabled: true
+  # Glowing effect on scroll items
+  glow: true
+
+books:
+  # Enable enchant book system
+  enabled: true
+  # Default book item material
+  material: BOOK
+  # Glowing effect on enchant books
+  glow: true
+
+gui:
+  # Number of enchants per page in browser
+  enchants-per-page: 45
+  # GUI update interval in ticks (for animations)
+  update-ticks: 10
+  # Close GUI on outside click
+  close-on-outside-click: false
+  bedrock:
+    # Simplified layout for Bedrock players
+    simplified-layout: true
+    # Rows for Bedrock chest GUI (max 6)
+    rows: 4
+
+database:
+  # Storage type: SQLITE or MYSQL
+  type: SQLITE
+  sqlite:
+    file: enchantforge.db
+  mysql:
+    host: localhost
+    port: 3306
+    database: enchantforge
+    username: root
+    password: ''
+    pool-size: 10
+    connection-timeout: 30000
+    idle-timeout: 600000
+    max-lifetime: 1800000
+  # Save interval in ticks (200 = 10 seconds)
+  save-interval: 200
+  # Cache player data in memory
+  cache-data: true
+
+hooks:
+  placeholderapi:
+    enabled: true
+  vault:
+    enabled: true
+  floodgate:
+    enabled: true
+  geyser:
+    enabled: true

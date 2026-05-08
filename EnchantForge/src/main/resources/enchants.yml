@@ -1,0 +1,171 @@
+# ============================================================
+#                   EnchantForge Enchants
+# ============================================================
+# Built-in enchants are registered in code.
+# Add your YAML-defined custom enchants here.
+#
+# Trigger types: ATTACK, BLOCK_BREAK, DAMAGE, SHOOT, MOVE,
+#                JUMP, FISH, KILL, ARMOR_EQUIP
+#
+# Effect types:  LIGHTNING, EXPLOSION, FIRE, FREEZE,
+#                POTION:<effect>:<duration>:<amplifier>,
+#                PARTICLE:<type>, SOUND:<sound>,
+#                HEAL:<amount>, TELEPORT, VELOCITY:<x>:<y>:<z>,
+#                XP:<amount>, ECONOMY:<amount>
+
+custom-enchants:
+
+  lightning_strike:
+    display: "<yellow>Lightning Strike"
+    description:
+      - "<gray>Calls a lightning bolt"
+      - "<gray>on the enemy."
+    item-types:
+      - SWORD
+    rarity: EPIC
+    max-level: 5
+    trigger: ATTACK
+    chance: 15
+    chance-per-level: 3
+    cooldown: 5
+    effects:
+      - LIGHTNING
+      - SOUND:ENTITY_LIGHTNING_BOLT_THUNDER
+      - PARTICLE:ELECTRIC_SPARK
+
+  nature_wrath:
+    display: "<green>Nature's Wrath"
+    description:
+      - "<gray>Causes an explosion of"
+      - "<gray>natural force on hit."
+    item-types:
+      - AXE
+    rarity: RARE
+    max-level: 3
+    trigger: ATTACK
+    chance: 20
+    effects:
+      - EXPLOSION
+      - PARTICLE:EXPLOSION_EMITTER
+      - SOUND:ENTITY_GENERIC_EXPLODE
+
+  frost_touch:
+    display: "<aqua>Frost Touch"
+    description:
+      - "<gray>Freezes the target"
+      - "<gray>in place briefly."
+    item-types:
+      - SWORD
+      - AXE
+    rarity: UNCOMMON
+    max-level: 4
+    trigger: ATTACK
+    chance: 25
+    chance-per-level: 5
+    effects:
+      - FREEZE
+      - POTION:SLOWNESS:60:3
+      - PARTICLE:SNOWFLAKE
+      - SOUND:BLOCK_POWDER_SNOW_STEP
+
+  fire_aspect_boost:
+    display: "<red>Inferno"
+    description:
+      - "<gray>Engulfs the target"
+      - "<gray>in intense flames."
+    item-types:
+      - SWORD
+    rarity: RARE
+    max-level: 5
+    trigger: ATTACK
+    chance: 30
+    effects:
+      - FIRE
+      - POTION:FIRE_RESISTANCE:0:0
+      - PARTICLE:FLAME
+      - SOUND:ENTITY_BLAZE_BURN
+
+  swift_harvest:
+    display: "<gold>Swift Harvest"
+    description:
+      - "<gray>Chance to get double"
+      - "<gray>drops on block break."
+    item-types:
+      - PICKAXE
+      - AXE
+      - SHOVEL
+      - HOE
+    rarity: UNCOMMON
+    max-level: 5
+    trigger: BLOCK_BREAK
+    chance: 15
+    chance-per-level: 3
+    effects:
+      - XP:2
+      - PARTICLE:VILLAGER_HAPPY
+
+  bounty_hunter:
+    display: "<gold>Bounty Hunter"
+    description:
+      - "<gray>Earn bonus coins"
+      - "<gray>on mob kill."
+    item-types:
+      - SWORD
+    rarity: RARE
+    max-level: 5
+    trigger: KILL
+    chance: 100
+    effects:
+      - ECONOMY:10
+      - XP:5
+      - PARTICLE:TOTEM_OF_UNDYING
+      - SOUND:ENTITY_PLAYER_LEVELUP
+
+  spring_step:
+    display: "<green>Spring Step"
+    description:
+      - "<gray>Launches you upward"
+      - "<gray>with great force."
+    item-types:
+      - BOOTS
+    rarity: UNCOMMON
+    max-level: 3
+    trigger: JUMP
+    chance: 100
+    effects:
+      - VELOCITY:0:0.8:0
+      - PARTICLE:CLOUD
+      - SOUND:ENTITY_FIREWORK_ROCKET_LAUNCH
+
+  deep_angler:
+    display: "<aqua>Deep Angler"
+    description:
+      - "<gray>Increases fishing rewards"
+      - "<gray>and XP gained."
+    item-types:
+      - FISHING_ROD
+    rarity: RARE
+    max-level: 5
+    trigger: FISH
+    chance: 100
+    effects:
+      - XP:10
+      - PARTICLE:FISHING
+      - SOUND:ENTITY_FISHING_BOBBER_SPLASH
+
+  absorb:
+    display: "<light_purple>Absorb"
+    description:
+      - "<gray>Chance to absorb"
+      - "<gray>incoming damage."
+    item-types:
+      - CHESTPLATE
+    rarity: EPIC
+    max-level: 5
+    trigger: DAMAGE
+    chance: 10
+    chance-per-level: 2
+    effects:
+      - HEAL:2
+      - PARTICLE:HEART
+      - SOUND:ENTITY_PLAYER_LEVELUP

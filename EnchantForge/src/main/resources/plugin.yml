@@ -1,0 +1,58 @@
+name: EnchantForge
+version: '${version}'
+main: com.joshuaop.enchantforge.EnchantForge
+api-version: '${apiVersion}'
+description: '${description}'
+authors:
+  - EnchantForge Team
+website: https://github.com/enchantforge
+
+prefix: EnchantForge
+
+softdepend:
+  - PlaceholderAPI
+  - Vault
+  - floodgate
+  - Geyser-Spigot
+  - ItemsAdder
+  - Oraxen
+
+commands:
+  ce:
+    description: Main EnchantForge command
+    usage: /ce <subcommand>
+    aliases:
+      - enchantforge
+      - ef
+    permission: enchantforge.use
+
+permissions:
+  enchantforge.use:
+    description: Allows use of basic /ce commands
+    default: true
+  enchantforge.admin:
+    description: Full admin access to EnchantForge
+    default: op
+    children:
+      enchantforge.give: true
+      enchantforge.reload: true
+      enchantforge.editor: true
+      enchantforge.create: true
+  enchantforge.give:
+    description: Allows giving enchant books and scrolls
+    default: op
+  enchantforge.reload:
+    description: Allows reloading the plugin
+    default: op
+  enchantforge.editor:
+    description: Allows access to the in-game enchant editor GUI
+    default: op
+  enchantforge.create:
+    description: Allows creating custom enchants via command
+    default: op
+  enchantforge.bypass.cost:
+    description: Bypass enchant application costs
+    default: false
+  enchantforge.bypass.chance:
+    description: Bypass success/destroy chance
+    default: false
